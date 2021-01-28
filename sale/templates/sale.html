@@ -1,0 +1,81 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block meta %}
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock %}
+
+        {% block extra_meta %}
+        {% endblock %}
+
+        {% block corecss %}
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% endblock %}
+
+        {% block extra_css %}
+        {% endblock %}
+
+        {% block corejs %}
+            <script src="https://kit.fontawesome.com/c76b1921bb.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="{% static 'js/materialize.js' %}"></script>
+            <script src="{% static 'js/init.js' %}"></script>
+            <script src="{% static 'js/carosel.js' %}"></script>
+
+        {% endblock %}
+
+        {% block extra_js %}
+        {% endblock %}
+
+        <title>Kerrymount-Estates {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Kerrymount Estates</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'sale' %}">For Sale</a></li>
+                <li><a href="">For Rent</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="">For Sale</a></li>  
+                <li><a href="">For Rent</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <div class="slider">
+            <ul class="slides">
+            <li>
+                <img src="{% static 'media/5-the-courtyard.jpg' %}"> <!-- random image -->
+                <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Sold - €400,000</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'media/7-crane-yard.jpg' %}"> <!-- random image -->
+                <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">For Rent - €2,000 p/m</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'media/mount-saint-annes.jpg' %}"> <!-- random image -->
+                <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Sold - €500,000</h5>
+                </div>
+            </li>
+            </ul>
+        </div>  
+    </body>
+</html>
