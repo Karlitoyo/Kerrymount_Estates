@@ -40,11 +40,31 @@
         <div class="nav-wrapper container">
         <a id="logo-container" href="{% url 'home' %}" class="brand-logo">Kerrymount Estates</a>
         <ul class="right hide-on-med-and-down">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                   <li><a href="" class="dropdown-item">Property Management</a></li>
+                {% endif %}
+                <li><a href="" class="dropdown-item">My Profile</a></li>
+                <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
+                {% else %}
+                <li><a href="" class="dropdown-item">Register</a></li>
+                <li><a href="" class="dropdown-item">Login</a></li>
+            {% endif %}
             <li><a href="{% url 'sale' %}">For Sale</a></li>
             <li><a href="{% url 'rent' %}">For Rent</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                   <li><a href="" class="dropdown-item">Property Management</a></li>
+                {% endif %}
+                <li><a href="" class="dropdown-item">My Profile</a></li>
+                <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
+                {% else %}
+                <li><a href="" class="dropdown-item">Register</a></li>
+                <li><a href="" class="dropdown-item">Login</a></li>
+            {% endif %}
             <li><a href="{% url 'sale' %}">For Sale</a></li>  
             <li><a href="{% url 'rent' %}">For Rent</a></li>
         </ul>
@@ -152,13 +172,13 @@
         <div class="container">
         <div class="row">
             <div class="col l6 s12">
-            <h5 class="white-text">Company Bio</h5>
-            <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+            <h5 class="white-text">Kerrymount-Estates</h5>
+            <p class="grey-text text-lighten-4">Bringing the properties to market in a convenient and affordable way. 
+                With over 10 years experience in the property market both 
+                internatioanlly and domestically we strive to provide the best servie possible.</p>
             </div>
             <div class="col l3 s12">
-            <h5 class="white-text">Settings</h5>
+            <h5 class="white-text">Social</h5>
             <ul>
                 <li><a class="white-text" href="#!">Link 1</a></li>
                 <li><a class="white-text" href="#!">Link 2</a></li>
