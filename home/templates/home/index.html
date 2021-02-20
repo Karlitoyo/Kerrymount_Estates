@@ -1,3 +1,133 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block content %}
+<div id="index-banner" class="parallax-container">
+        <div class="center-align section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center grey-text text-darken-4"></h1>
+            <div class="row center">
+            <h5 class="header col s12 grey-text text-darken-4"></h5>
+            </div>
+            <div class="row center">
+            <h5 class="header col s12 grey-text text-darken-4"></h5>
+            </div>
+            <div class="row center">
+            <a href="" id="download-button" class="btn-large waves-effect waves-light cyan lighten-1">Properties</a>
+            </div>
+            <br><br>
+
+        </div>
+        </div>
+        <div class="parallax"><img src="{% static 'homepage/background1.jpg' %}" alt="Unsplashed background img 1"></div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                <h5 class="center">A member of IPAV</h5>
+
+                <p class="light"></p>
+            </div>
+            </div>
+
+            <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">portrait</i></h2>
+                <h5 class="center">Licenced by the Property Resigtration Authority</h5>
+
+                <p class="light center">(PRAI)</p>
+            </div>
+            </div>
+
+            <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                <h5 class="center">Easy to work with</h5>
+
+                <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+        <!-- <div class="container">
+            <div class="row center">
+            <h5 class="header col s12 grey-text text-darken-4">Specializing in commercial and residenial properties in Ireland</h5>
+            </div>
+        </div> -->
+        </div>
+        <div class="parallax"><img src="{% static 'homepage/background2.jpg' %}" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>Contact Us</h4>
+            <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+        <!-- <div class="container">
+            <div class="row center">
+            <h5 class="header col black-text text-darken-2 s12">With over 10 years experience in the Irish market</h5>
+            </div>
+        </div> -->
+        </div>
+        <div class="parallax"><img src="{% static 'homepage/background3.jpg' %}" alt="Unsplashed background img 3"></div>
+    </div>
+
+    <footer class="page-footer teal">
+        <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+            <h5 class="white-text">Kerrymount-Estates</h5>
+            <p class="grey-text text-lighten-4">Bringing the properties to market in a convenient and affordable way. 
+                With over 10 years experience in the property market both 
+                internatioanlly and domestically we strive to provide the best servie possible.</p>
+            </div>
+            <div class="col l3 s12">
+            <h5 class="white-text">Social</h5>
+            <ul>
+                <li><a class="white-text" href="#!">Link 1</a></li>
+                <li><a class="white-text" href="#!">Link 2</a></li>
+                <li><a class="white-text" href="#!">Link 3</a></li>
+                <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+            </div>
+            <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+                <li><a class="white-text" href="#!">Link 1</a></li>
+                <li><a class="white-text" href="#!">Link 2</a></li>
+                <li><a class="white-text" href="#!">Link 3</a></li>
+                <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright">
+        </div>
+    </footer>
+{% endblock %}
