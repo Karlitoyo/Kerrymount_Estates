@@ -7,6 +7,7 @@
                 <li><a href="" class="dropdown-item">My Profile</a></li>
                 <li><a href="{% url 'sale' %}">For Sale</a></li>
                 <li><a href="{% url 'rent' %}">For Rent</a></li>
+                <li><a href="{% url 'propertys' %}">All Propertys</a></li>
                 <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
@@ -19,6 +20,7 @@
                 <li><a href="" class="dropdown-item">My Profile</a></li>
                 <li><a href="{% url 'sale' %}">For Sale</a></li>  
                 <li><a href="{% url 'rent' %}">For Rent</a></li>
+                <li><a href="{% url 'propertys' %}">All Propertys</a></li>
                 <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>

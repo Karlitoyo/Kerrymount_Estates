@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+        <div class="slider">
+            <ul class="slides">
+            <li>
+                <img src="{% static 'media/5-the-courtyard.jpg' %}"> <!-- random image -->
+                <div class="caption center-align">
+                <h2><strong>Sold!</strong></h2>
+                <h3 class="light grey-text text-lighten-3">€400,000</h3>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'media/7-crane-yard.jpg' %}"> <!-- random image -->
+                <div class="caption left-align">
+                <h2><strong>For Sale</strong></h2>
+                <h3 class="light grey-text text-lighten-3"> €2,000 p/m</h3>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'media/mount-saint-annes.jpg' %}"> <!-- random image -->
+                <div class="caption right-align">
+                <h2><strong>Sold!</strong></h2>
+                <h3 class="light grey-text text-lighten-3">€500,000</h3>
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s2">
+                    <img src="{% static 'homepage/background1.jpg' %}" alt="house" class="responsive-img"> <!-- notice the "circle" class -->
+                    </div>
+                    <div class="col s10">
+                    <span class="black-text">
+                        {{ products }}
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
