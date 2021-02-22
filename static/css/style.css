@@ -53,13 +53,13 @@ footer.page-footer {
 
 .input-field ::placeholder {
      color: black;
+     font-size: large;
+     font-weight: 400;
    }
 
    #search {
        background-color: transparent;
        text-align: center;
-       border-radius: 3px;
-       border-color: black;
    }
 
 .material-icons {
