@@ -4,21 +4,29 @@
 {% block content %}
 <div id="index-banner" class="parallax-container">
         <div class="center-align section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center grey-text text-darken-4"></h1>
-            <div class="row center">
-            <h5 class="header col s12 grey-text text-darken-4"></h5>
+            <div class="container">
+                <br><br>
+                <h1 class="header center grey-text text-darken-4"></h1>
+                <div class="row center">
+                <h5 class="header col s12 grey-text text-darken-4"></h5>
+                </div>
+                <div class="row center">
+                <h5 class="header col s12 grey-text text-darken-4"></h5>
+                </div>
+                <div class="row center">
+                <!-- <a href="{% url 'propertys' %}" id="download-button" class="btn-large waves-effect waves-light cyan lighten-1">Properties</a> -->
+                </div>
+                <br><br>
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" placeholder="Search Our Properties" type="search" autocomplete="off" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="row center">
-            <h5 class="header col s12 grey-text text-darken-4"></h5>
-            </div>
-            <div class="row center">
-            <a href="" id="download-button" class="btn-large waves-effect waves-light cyan lighten-1">Properties</a>
-            </div>
-            <br><br>
-
-        </div>
         </div>
         <div class="parallax"><img src="{% static 'homepage/background1.jpg' %}" alt="Unsplashed background img 1"></div>
     </div>

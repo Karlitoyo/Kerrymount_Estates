@@ -1,4 +1,15 @@
     {% load static %}
+    <!-- <nav class="white">
+        <div class="nav-wrapper">
+        <form>
+            <div class="input-field">
+            <input class="black-text" id="search" placeholder="Search Our Properties" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            </div>
+        </form>
+        </div>
+    </nav> -->
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
         <a id="logo-container" href="{% url 'home' %}" class="brand-logo">Kerrymount Estates</a>
@@ -8,7 +19,7 @@
                 <li><a href="{% url 'sale' %}">For Sale</a></li>
                 <li><a href="{% url 'rent' %}">For Rent</a></li>
                 <li><a href="{% url 'propertys' %}">All Propertys</a></li>
-                <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                 <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
@@ -21,7 +32,7 @@
                 <li><a href="{% url 'sale' %}">For Sale</a></li>  
                 <li><a href="{% url 'rent' %}">For Rent</a></li>
                 <li><a href="{% url 'propertys' %}">All Propertys</a></li>
-                <li><a href="{% url 'home' %}" class="dropdown-item">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                 <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
