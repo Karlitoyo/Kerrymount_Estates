@@ -1,1 +1,1 @@
-[{"pk": 1, "model": "products.category", "fields": {"name": "Sale", "friendly_name": "Sale"}}, {"pk": 2, "model": "propertys.category", "fields": {"name": "Rent", "friendly_name": "Rent"}}]
+[{"pk": 1, "model": "propertys.category", "fields": {"name": "Sale", "friendly_name": "Sale"}}, {"pk": 2, "model": "propertys.category", "fields": {"name": "Rent", "friendly_name": "Rent"}}]

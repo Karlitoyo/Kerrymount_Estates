@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'sale',
     'rent',
     'propertys',
+    'wallet',
 ]
 
 MIDDLEWARE = [
