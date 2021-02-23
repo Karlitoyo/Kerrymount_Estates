@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import Product, Category
 from django.db.models import Q
@@ -36,3 +36,14 @@ def all_propertys(request):
 
     return render(request, 'propertys/propertys.html', context)
 
+
+def product_detail(request, product_id):
+    """ A view to show individual products """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'propertys/property_detail.html', context)

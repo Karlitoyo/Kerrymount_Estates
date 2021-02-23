@@ -39,6 +39,9 @@
                                     <span class="card-title activator grey-text text-darken-4">{{ product.name }}<i class="material-icons right">more_vert</i></span>
                                     <p class="card-text">€{{ product.price }}</p>
                                 </div>
+                                <div class="card-action">
+                                <a href="{% url 'property_detail' product.id %}">Rent/Purchase</a>
+                                </div>
                                 <div class="card-reveal">
                                     <span class="card-title grey-text text-darken-4">{{ product.rating }}<i class="material-icons right">close</i></span>
                                     <p>{{ product.description }}</p>
