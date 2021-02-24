@@ -21,11 +21,12 @@ def add_to_wallet(request, item_id):
     # redirect_url = request.POST.get('redrect_url')
     wallet = request.session.get('wallet', {})
 
-    wallet[item_id] = [first_name, last_name, date, email, duration]
+    if item_id in list(wallet.keys()):
+
+        wallet[item_id] = [first_name, last_name, date, email, duration]
     # wallet[item_id] = last_name
     # wallet[item_id] = email
     # wallet[item_id] = duration
 
     request.session['wallet'] = wallet
-    print(request.session['wallet'])
     return render(request, 'wallet.html')
