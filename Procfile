@@ -1,1 +1,1 @@
-web: gunicorn kerrymount-estates.wsgi:application
+web: gunicorn full-stack-development-project.wsgi:application
