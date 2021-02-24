@@ -1,1 +1,1 @@
-web: gunicorn FULL-STACK-DEVELOPMENT-PROJECT.wsgi:application
+web: gunicorn full_stack.wsgi:application
