@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rent',
     'propertys',
     'wallet',
+    'checkout',
 
     # other
     'storages',

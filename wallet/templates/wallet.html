@@ -17,6 +17,8 @@
                 <div class="table">
                     {{ bag_items }}
                 </div>
+                <p class="">Checkout!</p>
+                <a href="{% url 'checkout' %}" class="waves-effect waves-light btn"><i class="material-icons left">credit_card</i>button</a>
             {% else %}
                 <p class="">Your Wallet is Empty!</p>
                 <a href="{% url 'propertys' %}" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>button</a>
