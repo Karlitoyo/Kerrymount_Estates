@@ -23,32 +23,32 @@
                 <form class="col s12" action="{% url 'add_to_wallet' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
-                        <div class="input-field col s6">
-                            <input name="first_name" type="text" data-item-id="{{ product.id }}" id="id_name_{{ product.id }}">
-                            <label for="first_name">First Name</label>
+                        <div class="input-group">
+                            <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         </div>
-                        <div class="input-field col s6">
-                            <input name="last_name" type="text" data-item-id="{{ product.id }}" id="id_surname_2{{ product.id }}">
+                    </div>
+                        <!-- <div class="input-field col s6">
+                            <input name="last_name" type="text" required>
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12" name="date" placeholder="date" data-item-id="{{ product.id }}" id="id_date_3{{ product.id }}">
+                        <div class="input-field col s12" name="date" placeholder="date" aria-required="true">
                             <input type="text" class="datepicker">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input name="duration" type="number" value="1" min="1" max="365" data-item-id="{{ product.id }}" id="id_days_4{{ product.id }}">
+                            <input name="duration" type="number" value="1" min="1" max="365" required>
                             <label for="duration">Duration of Days</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" name="email" type="email">
+                            <input id="email" name="email" type="email" required>
                             <label for="email">Email</label>
                         </div>
-                    </div>
+                    </div> -->
                       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                       </button>
