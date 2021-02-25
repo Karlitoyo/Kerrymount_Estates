@@ -7,23 +7,19 @@ def wallet_contents(request):
 
     wallet_items = []
     total = 0
-    product_count = 0
-    wallet = request.session.get('bag', {})
+    wallet = request.session.get('wallet', {})
 
-    for item_id, quantity in wallet.items():
+    for item_id in wallet.items():
         product = get_object_or_404(Product, pk=item_id)
         total = product.price
-        product_count += quantity
         wallet_items.append({
             'item_id': item_id,
-            'quantity': quantity,
             'product': product,
         })
 
     context = {
         'wallet_items': wallet_items,
         'total': total,
-        'product_count': product_count,
     }
 
     return context
