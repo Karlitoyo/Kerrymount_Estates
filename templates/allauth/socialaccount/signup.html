@@ -1,7 +1,7 @@
 {% extends "socialaccount/base.html" %}
 
 {% load i18n %}
-
+{% load account socialaccount %}
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
@@ -17,6 +17,12 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <div>
+        <h5 class="d-flex justify-content-center">Sign up with Social Media</h5>
+        <ul class="social-network social-circle d-flex justify-content-center">
+            <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus fa-3x"></i></a></li>
+        </ul>
+    </div>
 </form>
 
 {% endblock %}
