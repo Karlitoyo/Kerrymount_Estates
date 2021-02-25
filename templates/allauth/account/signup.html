@@ -16,6 +16,12 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <h5 class="d-flex justify-content-center">Sign up with Social Media</h5>
+    <ul class="social-network social-circle d-flex justify-content-center">
+        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
+    </ul>
 </form>
 
 {% endblock %}
