@@ -9,11 +9,11 @@ def wallet_contents(request):
     total = 0
     wallet = request.session.get('wallet', {})
 
-    for item_id in wallet.items():
-        product = get_object_or_404(Product, pk=item_id)
+    for product_id, product in wallet.items():
+        product = get_object_or_404(Product, pk=product_id)
         total = product.price
         wallet_items.append({
-            'item_id': item_id,
+            'product_id': product_id,
             'product': product,
         })
 

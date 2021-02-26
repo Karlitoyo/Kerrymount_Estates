@@ -6,7 +6,6 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from propertys.models import Product
 
-from .forms import OrderForm
 from wallet.contexts import wallet_contents
 
 import stripe
