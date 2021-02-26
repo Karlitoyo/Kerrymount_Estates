@@ -63,7 +63,7 @@ def checkout(request):
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
-        bag = request.session.get('bag', {})
+        wallet = request.session.get('wallet', {})
         if not wallet:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
