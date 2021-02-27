@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -19,15 +19,13 @@ def checkout(request):
         wallet = request.session.get('wallet', {})
 
         form_data = {
-            'full_name': request.POST['full_name'],
-            'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'street_address1': request.POST['street_adddress1'],
-            'street_address2': request.POST['street_adddress2'],
-            'country': request.POST['country'],
-            'town_or_city': request.POST['town_or_city'],
-            'county': request.POST['county'],
+            'first_name': request.POST['full_name'],
+            'address': request.POST['address'],
+            'phone': request.POST['phone'],
+            'order_total': request.POST['order_total'],
+            'order_number': request.POST['order_number'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
@@ -40,7 +38,7 @@ def checkout(request):
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save()
+
                     else:
                         for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
@@ -61,7 +59,7 @@ def checkout(request):
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            Please double check your information.')
     else:
         wallet = request.session.get('wallet', {})
         if not wallet:
@@ -87,5 +85,26 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
         }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'wallet' in request.session:
+        del request.session['wallet']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
 
     return render(request, template, context)
