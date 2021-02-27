@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load wallet_tools %}
 
 {% block content %}
 <div class="container">
@@ -12,18 +13,44 @@
     </div>
 
         <div class="row">
-        <div class="col">
-            {% if wallet_items %}
-                <div class="table">
-                    {{ wallet_items }}
-                </div>
-                <p class="">Checkout!</p>
-                <a href="{% url 'checkout' %}" class="waves-effect waves-light btn"><i class="material-icons left">credit_card</i>Checkout</a>
-            {% else %}
-                <p class="">Your Wallet is Empty!</p>
-                <a href="{% url 'propertys' %}" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>Keep Browsing</a>
-            {% endif %}
+            <div class="col">
+                {% if wallet_items %}
+                            <table class="responsive-table">
+                                <thead class="text-black">
+                                    <tr>
+                                        <th></th>
+                                        <th>Property Info</th>
+                                        <th>Price</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                {% for item in wallet_items %}
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" width="300rem" height="300rem" alt="{{ product.name }}">
+                                        </td>
+                                        <td>
+                                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="my-0">${{ item.product.price }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="my-0">${{ item.product.price }}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                {% endfor %}
+                                    <p class="">Checkout!</p>
+                                    <a href="{% url 'checkout' %}" class="waves-effect waves-light btn"><i class="material-icons left">credit_card</i>Checkout</a>
+                                {% else %}
+                                    <p class="">Your Wallet is Empty!</p>
+                                    <a href="{% url 'propertys' %}" class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>Keep Browsing</a>
+                                {% endif %}
+                            </table>
+                        </div>
+            </div>
         </div>
-    </div>
-</div>
 {% endblock %}

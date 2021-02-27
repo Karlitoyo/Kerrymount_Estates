@@ -22,5 +22,4 @@ def add_to_wallet(request, product_id):
         wallet[product_id] = quantity
 
     request.session['wallet'] = wallet
-    print(request.session['wallet'])
     return render(request, 'wallet.html')
