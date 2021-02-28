@@ -107,7 +107,7 @@ checkout with the items in their wallets.
 ## Further-Development
 
 Further development of the site can include an auction calculator or bidding system in which users can place bids on specific properties. This would draw more users to the site and
-allow 
+allow for further revenue to be generated through commissions. 
 
 ## Technologies-Utilised
 
