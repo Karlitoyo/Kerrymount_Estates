@@ -48,52 +48,36 @@ or logging into the application to make purchase or rent a property.
 
 The stratgey for the website is to attract users to view available properties. The website makes use of Materialize css for a polished finish and responsive layout.
 Making use of Postgres db with Heroku to store user logins and also through making use of social media icon for google login. This is to encourage users to store their
-information and provide weekly updates.
+information and provide weekly updates. Auto emails have been set up to allow for emails to be sent directly from django.
 
 ## Scope
 
-The Scope of the service is to create financial literacy and encourage saving from a wider range of individuals.
-This product can benefit individuals who rely on high interest loans or payday loans, this service can also benefit
-current mortgage holders who are struggling to meet regular repayments or who may be in negative equity. This service
-can also benefit individuals who are currently saving for a mortgage as the financial planning aspect of the service
-will improve savings and can also be verified through the service.
+The scope of the project is to allow users to purchase properties or rent a property from the site directly rather than visiting an estate agent or auctioneers.
 
 
 ## Structure
 
-**Zapit Home**
+**Kerrymount-Estates Home**
 
 The home page provides users with the initial landing page and is designed to be entice and encourage users to delve 
 deeper into the service. The home page provides details on the service offering and promotional content.
 
-**MyInformation**
+**For Rent**
 
-The MyInformation page is required for a user's sign up **for the purpose of demonstration the MyInformation fields are not live.**
-It was an option to include user registration and login through Werkzeug and store the logins via mongo, however for the 
-purpose of demonstration this is not necessary. The user will input their name, address, email and other 
-relevant information prior to commencing the service and provide consent to connect via PSD2. 
-The user will then input their annual salary + desired savings amount.
+The rental page allows users to view the available rental properties on the site and to book a specific property.
 
-**Cashflow**
+**For Sale**
 
-The cashflow section allows for a user to calculate their disposable income on a yearly basis. The inputs are based
-on most common user spends. The inputs are to be developed further to give a holistic view of a user's finances.
-The results can be either positive or negative. A threshold of €10,000 has been set for disposable income which will
-present a positive emoji if disposable income is above set threshold and a thinking emoji if below. Two separate text responses are
-set for each outcome also depending on disposable income figure returned.
+The sale page allows a user to view the available properties for sale on the site.
 
-**MyFinances**
+**All Propertys**
 
-The MyFinances page is designed to be simple and user friendly. The emoji buttons will allocate 
-a registered spend upon the user connecting via their bank account. The user will select the relevant spend and
-this will track the spend within our database. The spends will be managed and then visually represented on the results page.
+The all Propertys page provides a full listing of all the properties on the site and allows users to select a given property and add to their Wallet.
 
-**Results**
+**Wallet**
 
-The results page will graph a user's spending and provide a calculated saving based on their spending trends.
-This can be expanded upon with live data received from users and also with the incorporation of our planned
-voucher system in conjunction with local SME's. For purpose of demonstration the charts are not currently showing 
-live data as inputs are not currently stored via mongo. Upon storing inputs graphs will visualise user's cashflow.
+The Wallet allows users to add specific propertys they are interested in and to progress to checkout. The wallet will hold the chosen property while the user navigates the
+website and shows a total amount of the property cost on the navigation bar.
 
 
 > # Skeleton
@@ -112,57 +96,33 @@ Wireframes for the main navigation pages can be found below -
 
 ## Surface
 
-The surface of the website is intended to be easy to navigate and provide content that users find relevant to
-their spending. The application is designed for minimal user interaction. An initial period of learning must
-be undertaken before the system can recognise how a user's spending must be allocated and suggestions can be generated.
-The navigation on mobile and desktop does not alter except for the navigation bar collapsing. The choice to use emoji's
-as the primary method of identifying spending is backed up by data showing emoji use as becoming the new normal to communicate
-within our target demographic as can be shown below - 
+The surface of the site is designed to be eye catching and make use of responsive UI which materilize css provides. The django web framework provides a powerful admin portal for
+easily updating the database of available properties. The structure is layed out to be both user friendly with ease of navigation on both mobile and web.
 
-<p align="center">
-    <img src= 'https://blog.emojipedia.org/content/images/2020/05/2-Emoji-Usage-on-Twitter-2.JPG'>
-</p>
 
  > # Development
 
  ## Current-Features
 
-Currently we have a system which can collect and store user data via Mongodb. We can collect and process user logins
-and other relevant user data for sign up. This data can be used for locational purposes and for providing tailored
-vouchers and spend recommendations. Upon successful API integration we can then begin to process user spend data and
-begin to expand our current cash flow system based on further data points being received. Currently the MyFinances page
-is a UI which is designed to be simplistic and encourage users to interact with the platform. The Cashflow page provides
-a user to input their yearly Annual Salary + Total Savings. The user then inputs their total yearly debt + mortgage +
-shopping + travel + childcare expenses and a figure for disposable income is provided. Further inputs can be included
-and further analysis of spending upon user sign-up.
-
+Current features consist of the search function which is available to users who have both signed up to the site and for users who may wish to browse the available number
+of properties on the database. Should a user decide to create an account they can sign up using their email and user name or alternatively can make use of the social media
+'Google' login function for easy registration. Auto email confirmation is also set up for this process. Users can add specific projects to their wallet and then progress to 
+checkout with the items in their wallets.
 
 ## Further-Development
 
-Upon further development of the system we intend to incorporate Machine Learning capabilities within the back end expanded
-balance sheet and cash flow system. Further to this accounting platform our voucher system can allow for targeted campaigns
-based on local businesses within a user's area. This will not be invasive rather an aspect of the site users can visit
-should they require a particular service. Blockchain is available and can lend itself to this service through the tokenisation
-of vouchers which can be airdropped to a user or rewarded to a user for good spending/saving habits. IBM's open source 
-blockchain fits purpose for integration with some modifications to the open source code. Further development will also include
-a chat bot for 24hour customer queries, Machine Learning/AI for smart money management trends and real time spending and tracking.
-
-***Digital Wallet (Zaps)***
-
-The proposed voucher platform will include a digital wallet in which users can access their vouchers. This eco-system will be
-connected to a user's smart-phone and included within the platform itself. Users can access their wallet to view their tailored
-vouchers based on their spending. Partner businesses can target their audience based on user spending through the digital wallet
-included with the service. Users can store their vouchers and spend as appropriate; vouchers can be dropped monthly / in line 
-with a user's spending trends.
+Further development of the site can include an auction calculator or bidding system in which users can place bids on specific properties. This would draw more users to the site and
+allow 
 
 ## Technologies-Utilised
 
 - HTML
 - CSS
-- Java script
-- [Bootstrap](https://getbootstrap.com/)
+- [Java-script](https://www.javascript.com/)
+- [Materialize](https://materializecss.com/)
 - [Python](https://www.python.org/)
-- [MongoDB](https://www.mongodb.com/)
+- [Django](https://www.djangoproject.com/)
+- [Postgres](https://www.postgresql.org/)
 - [Heroku](www.heroku.com)
 
 
@@ -174,7 +134,7 @@ with a user's spending trends.
 
 ## Deployed-Site
 
-**Zapit -** (https://kyc-aml-project-karl.herokuapp.com/)
+**Kerrymount-Estates -** (https://kerrymount-estates.herokuapp.com/)
 
 ## Walkthrough
  1. User visit's site, enters information on MyInformation page (name, address, bank a/c information, approval to connect via PSD2)(***submit disabled for demonstration***).
@@ -233,23 +193,6 @@ and recommend specific items which can provide savings. System recognises reduct
 further reductions in TV/Broadband. User can now meet contractual mortgage repayments due to reductions suggested. Bank can
 restructure loan in line with customer improved affordability.
 
-> # Mobile-Application
-
-- [Mobile Application Source Code](https://github.com/Karlitoyo/Zapit-Mobile-App)
-
-Our Mobile Application is currently under development using Flutter and Dart programming language. We are in first stage development
-currently with the UI being worked on. Currently Landing page, Home page, Cashflow Page, MyFinances page & Zaps mobile wallet page UI
-in development with provided screenshot below. We intend to have a full UI built within the coming quarther which will include the features
-as per our submission hosted via Heroku. We will then develop out the back end functions and API integration.
-The Application will be available on IOS & Android and be available for download via both marketplaces upon completion.
-
-***Mobile Application Progress Development Screenshots***
-
-- [Landing Mobile Page](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Zapit-Landing-App.png)
-- [Home Mobile Page](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Zapit-Home-App.png)
-- [Cashflow Mobile Page](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Zapit-Cashflow-App.png)
-- [MyFinances Mobile Page](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Zapit-MyFinances-App.png)
-- [Zaps Wallet Mobile Page](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Zaps-Wallet-App.png)
 
 ## Developer comments
 
@@ -258,91 +201,6 @@ This will improve time to market and ensure testing of further development for p
 for login through google and social media. While the web based application is mobile ready further reach can be achived through Google play 
 store and Apple App Store.
 
-> # Business-Plan
-
-## Timeframe
-
-With the aid of development partners we can ensure smooth implementation of user connectivity, specifically 
-implantation of PSD2 and planned site development for inclusion of voucher/business eco-system as outlined with
-the revenue model. This can be achieved within a 6-8 month period for beta V1. Brand/product recognition will
-be completed in conjunction with anticipated release of product launch.
-
-**2 years to Irish market**
-**4 years to European market**
-**+4 global market**
-
-## Costs
-
-**Development**
-
-We anticipate full development with inclusion of all above development features and time to market to cost circa €50,000 and 2 years to market.
-Development team currently based in Ireland and South Africa. This gives two separate regions in which to go live. Both members have
-past experience in project development and implementation which will aid in cost reductions to develop application successfully.
-
-This cost can be further reduced through incubation development teams. This can allow for further cost allocation to
-market the product.
-
-**Marketing**
-
-This will be targeted at our intended demographic age of 18-30 year olds and will be based on social media and relevant platforms initially.
-As product/brand awareness improves further marketing management will be required to ensure market penetration is achieved. From research an
-average social media marketing campaign can be achieved on €12,000 depending on budget.
-
-## SWOT
-
-- Strengths
-
-Personal finances applications market is an increasing market. Recent analysis by Statista -
-(https://www.statista.com/outlook/298/109/personal-finance/united-states)
-indicates market growth to over €1 Billion in value by 2023 in the United States alone. A growth of 25%
-from its current position.
-
-The system has numerous strengths which include simple user-friendly UI making use of PSD2 for financial planning 
-and enabling customers to take control of their finances. The simplicity of the system and the focus on the emoji 
-language as the main method of interaction creates a UI that is friendly and provides simplistic and effortless 
-management of user finances. We have identified that users will not wish to always interact with the application 
-upon repeated spending this is achieved through sorting transactions and ensuring limited user interaction on 
-spends through real time transaction monitoring.
-
-- Weaknesses (Challenges)
-
-Challenges identified predominantly relate to API integration specifically B2C. GDPR and ensuring strict management of consumer data is a priority and has been taken 
-into consideration at all relevant stages of development.
-
-- Opportunities
-
-Opportunities lend itself to mortgage applications, term loan planning and individuals
-who have difficulty in controlling their finances. The opportunities of the system also relate to local businesses who
-can take advantage of the user base in their location and provide their service through the site based on our revenue model. 
-User spending trends and data are collected and managed to provide valuable information on specific areas and spending
-patterns.
-
-- Threats
-
-Threats relate to similar products. Mainly these relate to software for financial planners who in turn revert to clients
-with the outcomes or provide subscription services as the main source of revenue. Zapit will automate this service and 
-manage a user's spending and provide notifications on how well about user is at managing their spending. Specific software 
-that provides a similar service would include Buxfer, Quicken, Mint, Emma.
-Zapit will provide all of these services in one package with no subscription or added fees for extra functionality.
-
-## Revenue Model
-
-The revenue model will be based on data analytics predominantly predicting trends in user spending. Revenue will also
-be derived from business partners who wish to promote their service through the application. The service being provided
-without subscription will encourage users to save and suggests methods to do so. We can make use of partners' products
-database to advertise cost reductions to users through the application.
-All user data is currently stored on Mongodb which will migrate as requirements dictate. Currently this amounts to login data, 
-once users are connected via PSD2 this data can be expanded to include spending data. Revenue will come from partner companies 
-who wish to advertise services within the application eco-system. Zapit will provide targeted vouchers using niche marketing
-to the correct audience making use of data analytics and specific demographics with click conversion as the primary model for charges.
-This can be achieved through tokenisation of assets which can be dropped via further development of the platform. This is intended 
-to be un-intrusive to the platform with users choosing to visit this area of the application should their needs require. 
-Our service will be provided without a subscription aspect as this deters more uptake than it encourages to make use of the 
-platform and intended eco-system. Our revenue model is geared towards data analytics and paid partnership with business/voucher platform.
-
-<p align="center">
-    <img src= 'https://lucid.app/publicSegments/view/f5d1f65b-6841-48c9-a79b-ce6cb73eb5d4/image.png'>
-</p>
 
 > # Credits
 

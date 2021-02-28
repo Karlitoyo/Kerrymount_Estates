@@ -5,21 +5,37 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col l12 my-auto">
+                <div class="header-content mx-auto">
+                <form class="signup login-box" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                    <div class="login-space">
+                        <div class="login">
+                            <h1>{% trans "Sign Up" %}</h1>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-  <h5 class="d-flex justify-content-center">Sign up with Social Media</h5>
-    <ul class="social-network social-circle d-flex justify-content-center">
-        <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus fa-3x"></i></a></li>
-    </ul>
-</form>
+                            <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                {% if redirect_field_value %}
+                                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                {% endif %}
+                                <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+                                <div class="hr"></div>
+                                        <h5>Sign up with Social Media</h5>
+                                        <ul class="social-network social-circle d-flex justify-content-center">
+                                            <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus fa-3x"></i></a></li>
+                                        </ul>
+                                    <div class="foot"> <a href="{% url 'account_reset_password' %}">Forgot Password?</a> </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 {% endblock %}

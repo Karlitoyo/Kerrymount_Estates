@@ -8,36 +8,37 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col l12 my-auto">
+                <div class="header-content mx-auto">
+                <form class="signup login-box" id="signup_form" method="post" action="{% url 'account_login' %}">
+                    <div class="login-space">
+                        <div class="login">
+                            <h1>{% trans "Sign In" %}</h1>
 
-{% get_providers as socialaccount_providers %}
-
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-
-    <h5 class="d-flex justify-content-center">Sign up with Social Media</h5>
-    <ul class="social-network social-circle d-flex justify-content-center">
-        <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus fa-3x"></i></a></li>
-    </ul>
-</form>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                            {% endif %}
+                            <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                            <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+                        </div>
+                    </div>
+                    
+                            <div class="hr"></div>
+                        <h5>Sign up with Social Media</h5>
+                        <ul class="social-network social-circle d-flex justify-content-center">
+                            <li><a href="{% provider_login_url 'google' %}" class="icoGoogle" title="Google +"><i class="fab fa-google-plus fa-3x"></i></a></li>
+                        </ul>
+                    <div class="foot"> <a href="{% url 'account_reset_password' %}">Forgot Password?</a> </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}
