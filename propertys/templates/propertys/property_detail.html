@@ -2,10 +2,9 @@
 {% load static %}
 
 {% block content %}
-
+<!---------------------------------Form and product detail to submit to Wallet app-->
     <div class="container">
         <div class="row">
-        <!-- <div class="col s12 m6 l6 offset-l2"> -->
             <div class="card-image waves-effect waves-block waves-light">
                 <a href="{{product.image.url}}" target="_black">
                 <img src="{{product.image.url}}" width="100%" height="100%" alt="{{ product.name }}">
@@ -27,28 +26,6 @@
                             <input class="form-control qty_input" type="text" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         </div>
                     </div>
-                        <!-- <div class="input-field col s6">
-                            <input name="last_name" type="text" required>
-                            <label for="last_name">Last Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12" name="date" placeholder="date" aria-required="true">
-                            <input type="text" class="datepicker">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input name="duration" type="number" value="1" min="1" max="365" required>
-                            <label for="duration">Duration of Days</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" name="email" type="email" required>
-                            <label for="email">Email</label>
-                        </div>
-                    </div> -->
                       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                       </button>
@@ -57,7 +34,5 @@
             </div>
         </div>
     </div>
-    <!-- </div> -->
-
 
 {% endblock %}

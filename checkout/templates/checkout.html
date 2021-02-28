@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load wallet_tools %}
-
+<!-------------------------------------Checkout form to submit purchase to Stripe for processing-->
 {% block content %}
   <div class="row">
     <form class="col s12" action="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
       <div class="row">
         <div class="input-field col s6">
-            {{ order_form.first_name}}
+            {{order_form.first_name}}
         </div>
         <div class="input-field col s6">
-            {{ order_form.last_name}}   
+            {{ order_form.last_name}}
         </div>
       </div>
       <div class="row">
