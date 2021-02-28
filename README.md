@@ -178,16 +178,18 @@ and selects checkout. Users then enter payment information and secure property p
 Single male wishing to rent property in Ireland
 
 User visits site and commences search for rental property in City Center. User is provided with a selection of properties from the database. User creates account using social media
-login function and enters the rent section of the website. 
+login function and enters the rent section of the website. Upon user reviewing the rental properties available the user selects a city center location property within their price range.
+The user reads the description and follows the link provided to the all properties page. The user adds the property to their wallet and proceeds to the checkout section. The user 
+enters their information and checks out securely with stripe.
 
 
 ## Developer comments
 
-Zapit will continue to develop to include live data for testing purposes. The Zapit web application will migrate to the Django web framework.
-This will improve time to market and ensure testing of further development for planned functionality with allauth 
-for login through google and social media. While the web based application is mobile ready further reach can be achived through Google play 
-store and Apple App Store.
-
+For my milestone project I initially has a seperate project which I was working on using flask creating income calculator. My inital intention was to port this application over to Django and continue to develop
+it through Django. I am currently stil developing this product however it would not meet all the requirements of the milestone project integration of payments etc. I then decided to
+create this mobile web properties site for a family member who requires an online presense. I will continue to develop. I had difficulty with the json data initally as I amended the 
+data provided in the course to fit my need. This caused some issues with connecting the rent / sale page to the product id's as they are not working off of the same data. As can be 
+seen in my sale.html + rent.html these properties are rendered using html whereas the all propertys page can itereate through the data uploaded to django.
 
 > # Credits
 
