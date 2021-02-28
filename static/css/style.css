@@ -11,6 +11,7 @@ p {
   color: #26a69a;
 }
 
+/* Carosel styling */
 .parallax-container {
   min-height: 380px;
   line-height: 0;
@@ -31,6 +32,7 @@ p {
   }
 }
 
+/* section styling media queries home page */
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
@@ -51,6 +53,7 @@ footer.page-footer {
   margin: 0;
 }
 
+/* search bar styling */
 .input-field ::placeholder {
      color: black;
      font-size: large;
@@ -65,6 +68,8 @@ footer.page-footer {
 .material-icons {
     color: black;
 }
+
+/* stripe payment styling */
 
 .FormGroup {
   margin: 0 15px 20px;
