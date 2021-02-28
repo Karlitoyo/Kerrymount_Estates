@@ -194,7 +194,7 @@ seen in my sale.html + rent.html these properties are rendered using html wherea
 
 > # Credits
 
-Special thanks must be given to the creators of all the above-mentioned sources and technologies that were used to develop Zapit.
+Special thanks must be given to the creators of all the above-mentioned sources and technologies that were used to develop Kerrymount-Estates.
 
 > # Creators
 
