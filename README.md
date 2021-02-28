@@ -166,19 +166,19 @@ sucessful re-direct.
 
 ## First case example user experience
 
-User wishes to purchase property in given location. User visits site and searches database for property in location 'Blackrock'. User is shown available properties in Blackrock with
-photo and description of property. Details include price, rating, 
+Couple who wish to purchase property for the first time.
+
+Users wishes to purchase property in given location. Users visit site and search database for property in location 'Blackrock'. Users are shown available properties in Blackrock with
+photo and description of property. Users then login to site to progress with purchase scurely. Users visit viewed property details, details include price, rating, and a description of the product and image. Users then revert to homepage and search for alternative property in
+'Sandyford. Users are happy with the price and description and adds the property to their wallet. Users then continue browsing the site. Users decide to checkout product from wallet
+and selects checkout. Users then enter payment information and secure property purchase.
 
 ## Second case example user experience
 
-Low income user who is in arrears on mortgage and cannot maintain current levels of debt to salary -
+Single male wishing to rent property in Ireland
 
-User visits site. Provides full requested information as required for assessment to commence. Further assessment is
-required to understand level of debt of user to meet desired savings figure. User connects via PSD2 and consents for 
-transactions to be assessed to manage finances. Based on user spending assessment can identify reductions in weekly shopping
-and recommend specific items which can provide savings. System recognises reductions available on heating and electricity 
-further reductions in TV/Broadband. User can now meet contractual mortgage repayments due to reductions suggested. Bank can
-restructure loan in line with customer improved affordability.
+User visits site and commences search for rental property in City Center. User is provided with a selection of properties from the database. User creates account using social media
+login function and enters the rent section of the website. 
 
 
 ## Developer comments
