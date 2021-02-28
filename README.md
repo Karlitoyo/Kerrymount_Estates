@@ -86,12 +86,7 @@ Wireframes for the main navigation pages can be found below -
 
  ## Wireframes
  
-- [Homepage](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Login.png)
-- [Inputs](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Inputs-Page.png)
-- [Bank-Authentication](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Bank-Authentication.png)
-- [Dashboard](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Dashboard.png)
-- [Forecast](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Forecast.png)
-- [Results](https://github.com/Karlitoyo/Zapit/blob/master/Wireframes/Results-Page.png)
+ My wireframes Subscription has unfortunately lapsed
 
 
 ## Surface
@@ -160,30 +155,19 @@ Make use of the git pull function (if required to update the branch), git clone 
 
 **Version-Control**
 
-Differing Versions of thsi project have been developed. Initially the website had a rental and property section. An all proerties section was then added to include both rental and 
+Differing Versions of this project have been developed. Initially the website had a rental and property section. An all proerties section was then added to include both rental and 
 for sale properties. Further version included a wallet to store a users selected property. Next version upon review required was the checkout application as a user was then required to
-make purchase of their chosen property. Stripe was then integrated to accomplish this function. Social media login was also a feature that was brought in later to the project. Serarch 
-function was 
+make purchase of their chosen property. Stripe was then integrated to accomplish this function. Social media login was also a feature that was brought in later to the project. Search 
+function was integrated to include searching from the homepage. This caused an issue as it allowed for unauthroised (non-registered users) to progress to the checkout without signing in.
+An if statements within the hmtl fixed this issue. Resolved a number of issues with stripe payments integration as for final stages of project. Mainly related to form submission and 
+sucessful re-direct.
 
 > # User-Stories
 
 ## First case example user experience
 
-Middle income user who has difficulty meeting loan obligations and struggles with regular savings -
-
-Upon entering the site user will be taken to the home page. Upon visiting the home page the user will then visit the
-MyInformation page and input relevant requested user information. Name, Surname, Address, DOB, Gender, Country of Residence,
-E-Mail. The user will then visit the 'Bank Reference' section and provide a reference that was emailed securely to the user
-upon providing their email in the previous section. The user will have provided the relevant required information securely
-to connect their bank account to our service, the user will then input their annual salary + desired savings.
-The user will need to select the 'connect to Zapit tickbox' which will then connect to the users bank account under PSD2.
-Any additional information will then be put into the additional information page ie bank account information if required
-or copy of passport / driver's licence. The user will then be connected to Zapit and payments can be managed through the site.
-The 'MyFinances' page outlines the simplicity of the service. A user will be presented with an amount and will select from the 
-available emoji's which best describes the amount spent. This removes mental barrier a user has around their finances being 
-numbers and something that is alien to them. It creates a more comfortable environment in which to manage their savings. The 
-results page then provides further breakdown of user spending and graphs how they spent and provides methods by which to
-save.
+User wishes to purchase property in given location. User visits site and searches database for property in location 'Blackrock'. User is shown available properties in Blackrock with
+photo and description of property. Details include price, rating, 
 
 ## Second case example user experience
 
