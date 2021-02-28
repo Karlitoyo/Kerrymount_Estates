@@ -19,11 +19,11 @@ def checkout(request):
         wallet = request.session.get('wallet', {})
 
         form_data = {
-            'first_name': request.POST['full_name'],
-            'address': request.POST['address'],
+            'first_name': request.POST['first_name'],
+            'last_name': request.POST['last_name'],
+            'full_address': request.POST['full_address'],
             'phone': request.POST['phone'],
-            'order_total': request.POST['order_total'],
-            'order_number': request.POST['order_number'],
+            'email': request.POST['email'],
         }
 
         order_form = OrderForm(form_data)
@@ -36,15 +36,13 @@ def checkout(request):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
-                            quantity=item_data,
                         )
 
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for product in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
@@ -53,7 +51,7 @@ def checkout(request):
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_bag'))
+                    return redirect(reverse('view_wallet'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -64,7 +62,7 @@ def checkout(request):
         wallet = request.session.get('wallet', {})
         if not wallet:
             messages.error(request, "There's nothing in your bag at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('propertys'))
 
         current_wallet = wallet_contents(request)
         total = current_wallet['total']
@@ -102,7 +100,7 @@ def checkout_success(request, order_number):
     if 'wallet' in request.session:
         del request.session['wallet']
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout_success.html'
     context = {
         'order': order,
     }
