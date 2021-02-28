@@ -47,7 +47,7 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the Propertys in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
