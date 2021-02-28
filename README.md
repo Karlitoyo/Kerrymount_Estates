@@ -87,7 +87,7 @@ Wireframes for the main navigation pages can be found below -
 
  ## Wireframes
  
- My wireframes Subscription has unfortunately lapsed
+ My wireframes subscription has unfortunately lapsed
 
 
 ## Surface
