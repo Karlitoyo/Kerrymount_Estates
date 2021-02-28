@@ -53,6 +53,7 @@ information and provide weekly updates. Auto emails have been set up to allow fo
 ## Scope
 
 The scope of the project is to allow users to purchase properties or rent a property from the site directly rather than visiting an estate agent or auctioneers.
+This will aid to reduce costs for user and in a time when alot of proactices are going digital further online property sales will increase as a result.
 
 
 ## Structure
