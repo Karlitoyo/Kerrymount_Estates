@@ -1,4 +1,5 @@
     {% load static %}
+    <!-------------------------------Full page navbar-->
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
         <a id="logo-container" href="{% url 'home' %}" class="brand-logo">Kerrymount Estates</a>
@@ -16,6 +17,7 @@
                 <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
             {% endif %}               
         </ul>
+<!--------------------------------mobile navbar-->
         <ul id="nav-mobile" class="sidenav">
             {% if request.user.is_authenticated %}
                 <li><a href="" class="dropdown-item">My Profile</a></li>

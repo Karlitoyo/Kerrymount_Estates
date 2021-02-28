@@ -2,24 +2,25 @@
 {% load static %}
 
 {% block content %}
+<!-----------------------------------------slideshow-->
         <div class="slider">
             <ul class="slides">
             <li>
-                <img src="{% static 'media/5-the-courtyard.jpg' %}"> <!-- random image -->
+                <img src="{% static 'media/5-the-courtyard.jpg' %}">
                 <div class="caption center-align">
                 <h2><strong>Sold!</strong></h2>
                 <h3 class="light grey-text text-lighten-3">€400,000</h3>
                 </div>
             </li>
             <li>
-                <img src="{% static 'media/7-crane-yard.jpg' %}"> <!-- random image -->
+                <img src="{% static 'media/7-crane-yard.jpg' %}">
                 <div class="caption left-align">
                 <h2><strong>For Sale</strong></h2>
                 <h3 class="light grey-text text-lighten-3"> €2,000 p/m</h3>
                 </div>
             </li>
             <li>
-                <img src="{% static 'media/mount-saint-annes.jpg' %}"> <!-- random image -->
+                <img src="{% static 'media/mount-saint-annes.jpg' %}">
                 <div class="caption right-align">
                 <h2><strong>Sold!</strong></h2>
                 <h3 class="light grey-text text-lighten-3">€500,000</h3>
@@ -27,7 +28,7 @@
             </li>
             </ul>
         </div>
-
+<!-----------------------------------------Propertys container-->
             <div class="container">
                     <div class="col l3 m6 s12">
                         {% for product in products %}
@@ -52,30 +53,4 @@
                         {% endfor %}
                     </div>
                 </div>
-
-
-
-                    <!-- <div class="col s10">
-                    <span class="black-text">
-                        {% for product in products %}
-                            <div class="col 6">
-                                <div class="card">
-                                {% if product.image %}
-                                    <a href="" img class="" src="{{ product.image }}" alt="{{ product.name }}"></a>
-                                {% endif %}
-                                    <div class="row">
-                                        <div class="col">
-                                            <p>{{ product.description }}</p>
-                                            <p>€{{ product.price }}</p>
-                                            <p>{{ product.rating }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 {% endblock %}

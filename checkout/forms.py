@@ -1,13 +1,13 @@
 from django import forms
 from .models import Order
 
-
+# form model for checkout from to show fields
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('first_name', 'last_name', 'full_address', 'phone', 'email')
 
-
+# placeholder information for checkout payment form
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)

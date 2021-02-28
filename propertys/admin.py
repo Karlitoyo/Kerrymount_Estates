@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
+# below functions list the products within the admin section django
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -17,7 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('price',)
 
-
+# show friendly name of backend django admin
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',

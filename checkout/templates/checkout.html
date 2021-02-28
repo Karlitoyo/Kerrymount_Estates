@@ -61,6 +61,8 @@
         </p>
     </div>
 {% endblock %}
+
+<!-----------------------Js script for stripe payments-->
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}

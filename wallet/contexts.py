@@ -3,6 +3,10 @@ from decimal import Decimal
 from django.shortcuts import get_object_or_404
 from propertys.models import Product
 
+# wallet funtion to take wallet id in wallet
+# items and allow for context processor to
+# show information across all apps on site
+
 
 def wallet_contents(request):
 
@@ -15,7 +19,6 @@ def wallet_contents(request):
     for product_id, product in wallet.items():
         product = get_object_or_404(Product, pk=product_id)
         total = product.price
-        # product_count += quantity
         wallet_items.append({
             'product_id': product_id,
             'product': product,
