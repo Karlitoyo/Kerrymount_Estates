@@ -137,7 +137,7 @@ allow
 **Kerrymount-Estates -** (https://kerrymount-estates.herokuapp.com/)
 
 ## Walkthrough
- 1. User visit's site, enters information on MyInformation page (name, address, bank a/c information, approval to connect via PSD2)(***submit disabled for demonstration***).
+ 1. User visit's site, User can sign up to login / register or alternatively browse.
  2. User then visits cashflow page and inputs salary, savings, amount of debt + relevant outgoings. 
  3. Response is then given based on total disposable income. 
  4. User is then presented with results page where user spending is graphed and suggested reductions are provided.
