@@ -124,6 +124,7 @@ allow
 - [Django](https://www.djangoproject.com/)
 - [Postgres](https://www.postgresql.org/)
 - [Heroku](www.heroku.com)
+- [Stripe](www.stripe.com)
 
 
 - [Google Fonts](https://fonts.google.com/)
@@ -137,30 +138,32 @@ allow
 **Kerrymount-Estates -** (https://kerrymount-estates.herokuapp.com/)
 
 ## Walkthrough
- 1. User visit's site, User can sign up to login / register or alternatively browse.
- 2. User then visits cashflow page and inputs salary, savings, amount of debt + relevant outgoings. 
- 3. Response is then given based on total disposable income. 
- 4. User is then presented with results page where user spending is graphed and suggested reductions are provided.
+ 1. User visit's site, User can sign up to login / register or alternatively browse using the search function on home page.
+ 2. User signs up or logins into the site using the main navigation bar.
+ 3. User browses categories of produucts for rent of for sale or all products.
+ 4. User selects desired product for purchase or rental and proceeds to add the item to their wallet.
+ 5. User then proceeds to chackout and confirms order securely with payment via stripe.
 
 The site is deployed on Heroku and code is available to view using Github.
-Navigated to Github account, on the top left of the screen select "Zapit" repository, 
-Env.py holds relevant mongo db address + password, IP and PORT and secret key.
-A number of dependencies are required to run the system, flask, flask_pymongo, dnspython which are
+Navigated to Github account, on the top left of the screen select "Kerrymount_Estates" repository, 
+All enviorment variables are stored on Heroku so user will require individual variables for db or stripe API.
+A number of dependencies are required to run the system, django, stripe, Pillow, oauthlib, gunicorn, Flask,psycopg2-binary, boto3 among others which are
 outlined in the requirements.txt file.
 
-- Zapit : (https://github.com/Karlitoyo/Zapit)
+- Kerrymount-Estates : (https://github.com/Karlitoyo/Kerrymount_Estates)
 
 **Cloning**
 
-Can be achieved by selecting the green highlighted button which states - "Clone or Download" via the webpage: (https://github.com/Karlitoyo/Zapit) this will 
+Can be achieved by selecting the green highlighted button which states - "Clone or Download" via the webpage: (https://github.com/Karlitoyo/Kerrymount_Estates) this will 
 give the option of downloading a .zip file or opening in desktop an option to clone using HTTP is also given for cloning and running project locally through Gitpod. 
 Make use of the git pull function (if required to update the branch), git clone and git push to named repository.
 
 **Version-Control**
 
-All versions of the system are based around a calculator and input model for cashflow and balance sheet. Version 0.2 will include login functionality and user profile which will allow for
-live data being stored on database and then visualised on results.html page. Proceeding versions will allow for PSD2
-connectivity and full API integration.
+Differing Versions of thsi project have been developed. Initially the website had a rental and property section. An all proerties section was then added to include both rental and 
+for sale properties. Further version included a wallet to store a users selected property. Next version upon review required was the checkout application as a user was then required to
+make purchase of their chosen property. Stripe was then integrated to accomplish this function. Social media login was also a feature that was brought in later to the project. Serarch 
+function was 
 
 > # User-Stories
 
@@ -209,4 +212,3 @@ Special thanks must be given to the creators of all the above-mentioned sources 
 > # Creators
 
 - Karl Timmins
-- Jacob George
